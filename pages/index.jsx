@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import {Link} from "next";
 import axios from "axios";
 import {useState, useEffect} from 'react';
 import Table from 'react-bootstrap/Table';
