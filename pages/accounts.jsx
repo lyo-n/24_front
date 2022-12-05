@@ -51,7 +51,7 @@ const Accounts = () => {
                 payment,
                 paymentData
             };    
-            await axios.post("http://localhost:3005/api/accountsNew", newProduct);
+            await axios.post("https://two4-server.onrender.com/api/accountsNew", newProduct);
             window.location.reload();
         } catch (err) {
             console.log(err);

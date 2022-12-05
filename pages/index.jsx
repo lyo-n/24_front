@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 
 
 export async function getStaticProps(context) {
-  const response = await fetch(`http://localhost:3005/api/accounts`)
+  const response = await fetch(`https://two4-server.onrender.com/api/accounts`)
   const accounts = await response.json()
   return {
       props: {accounts},
@@ -21,7 +21,7 @@ const Accounts = ({accounts}) =>  {
 
     const handlePaid = async (_id) => {
       try {
-          await axios.get(`http://localhost:3005/api/${_id}`);
+          await axios.get(`https://two4-server.onrender.com/api/${_id}`);
           window.location.reload();
       } catch (err) {
           console.log(err);
@@ -30,7 +30,7 @@ const Accounts = ({accounts}) =>  {
 
     const handleDelete = async (_id) => {
       try {
-          await axios.delete(`http://localhost:3005/api/${_id}`);
+          await axios.delete(`https://two4-server.onrender.com/api/${_id}`);
           window.location.reload();
       } catch (err) {
           console.log(err);
