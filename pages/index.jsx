@@ -111,7 +111,7 @@ const Accounts = ({accounts}) =>  {
               </tbody>
             </Table>   
             <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', top: '30px'}}>
-            <Link href="/accounts">
+            <Link href="https://two4-server.onrender.com/accounts">
                 <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
                   Create account
                 </Button>

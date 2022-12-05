@@ -105,7 +105,7 @@ const Accounts = () => {
         </InputGroup>
     </div>
         <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', display: "flex"}}>
-            <Link href="/">
+            <Link href="https://two4-server.onrender.com/">
                 <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
                     onClick={handleCreate}
                 >
