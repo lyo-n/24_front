@@ -28,7 +28,7 @@ const Accounts = ({accounts}) =>  {
     };
 
     const searchFilter = (array) => {
-    return array.filter(
+    return array?.filter(
       (el) => el.companyName.includes(query)
     )
     }
