@@ -9,6 +9,7 @@ import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
 const Accounts = ({accounts}) =>  {
     const [query, setQuery] = useState('');
 
+
     const handlePaid = async (_id) => {
       try {
           await axios.get(`https://two4-server.onrender.com/api/${_id}`);
@@ -114,9 +115,15 @@ const Accounts = ({accounts}) =>  {
 
 export async function getStaticProps(context) {
   const response = await fetch(`https://two4-server.onrender.com/api/accounts`)
-  const acc = await response.json()
+  const accounts = await response.json()
   return {
-      props: {accounts: {acc}},
+    props: {
+      accounts,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 10, // In seconds
   }
 }
 
