@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import {Form, Button, InputGroup, Container} from 'react-bootstrap';
-import Link from 'next/link'
+import Link from 'next/link';
 
 
 
@@ -102,18 +102,20 @@ const Accounts = () => {
         </InputGroup>
     </div>
         <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', display: "flex"}}>
-            <Link href="/" passHref legacyBehavior>
-                {/* <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
+            
+                <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
                     onClick={handleCreate}
                 >
-                    Create account
+                    <Link href="/">
+                        Create account
+                    </Link>
                 </Button>
                 <Button variant="outline-dark" id="button-addon1" style={{ width: '150px', top: '20px'}}
                 >
-                    Back
-                </Button> */}
-                BACK
-            </Link>
+                    <Link href="/" >
+                        Back
+                    </Link>
+                </Button>
         </InputGroup>
         </Container>   
     </div>

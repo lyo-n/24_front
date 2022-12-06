@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import axios from "axios";
 import {useState} from 'react';
 import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
@@ -101,14 +101,11 @@ const Accounts = ({accounts}) =>  {
               </tbody>
             </Table>   
             <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', top: '30px'}}>
-            <Link href="/accounts" passHref legacyBehavior>
-                {/* <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
-                  Create account
-                </Button> */}
-
-                NEXT
-            </Link>
-                
+                <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
+                  <Link href="/accounts">
+                    Create account
+                  </Link>
+                </Button>
             </InputGroup>
             </Container>
         </div>
