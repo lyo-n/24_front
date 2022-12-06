@@ -114,9 +114,9 @@ const Accounts = ({accounts}) =>  {
 
 export async function getStaticProps(context) {
   const response = await fetch(`https://two4-server.onrender.com/api/accounts`)
-  const accounts = await response.json()
+  const acc = await response.json()
   return {
-      props: {accounts},
+      props: {accounts: {acc}},
   }
 }
 
