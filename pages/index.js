@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import axios from "axios";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
 
 
@@ -17,10 +17,12 @@ const Accounts = ({accounts}) =>  {
           console.log(err);
       }
     };
-
+    
     const handleDelete = async (_id) => {
       try {
+        useEffect(() => {
           await axios.delete(`https://two4-server.onrender.com/api/${_id}`);
+        }, [])
           // window.location.reload();
       } catch (err) {
           console.log(err);
