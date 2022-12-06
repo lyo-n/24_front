@@ -12,22 +12,19 @@ const Accounts = ({accounts}) =>  {
     const handlePaid = async (_id) => {
       try {
           await axios.get(`https://two4-server.onrender.com/api/${_id}`);
-          // window.location.reload();
+          window.location.reload();
       } catch (err) {
           console.log(err);
       }
     };
     
     const handleDelete = async (_id) => {
-
-      useEffect(() => {
       try {
           await axios.delete(`https://two4-server.onrender.com/api/${_id}`);
-          // window.location.reload();
+          window.location.reload();
       } catch (err) {
           console.log(err);
       }
-    }, [])
     };
 
     const searchFilter = (array) => {
