@@ -1,10 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import {Form, Button, InputGroup, Container} from 'react-bootstrap';
 import {Link} from "next";
-import InputGroup from 'react-bootstrap/InputGroup';
-import Container from 'react-bootstrap/Container';
 
 
 

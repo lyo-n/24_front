@@ -1,11 +1,7 @@
 import {Link} from "next";
 import axios from "axios";
 import {useState, useEffect} from 'react';
-import Table from 'react-bootstrap/Table';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
+import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
 
 
 export async function getStaticProps(context) {
@@ -111,7 +107,7 @@ const Accounts = ({accounts}) =>  {
               </tbody>
             </Table>   
             <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', top: '30px'}}>
-            <Link href="./accounts">
+            <Link href="/accounts">
                 <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
                   Create account
                 </Button>
