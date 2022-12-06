@@ -1,16 +1,10 @@
 import {Link} from "next";
 import axios from "axios";
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
 
 
-export async function getStaticProps(context) {
-  const response = await fetch(`https://two4-server.onrender.com/api/accounts`)
-  const accounts = await response.json()
-  return {
-      props: {accounts},
-  }
-}
+
 
 const Accounts = ({accounts}) =>  {
     const [query, setQuery] = useState('');
@@ -118,5 +112,15 @@ const Accounts = ({accounts}) =>  {
         </div>
     )
 }
+
+export async function getStaticProps(context) {
+  const response = await fetch(`https://two4-server.onrender.com/api/accounts`)
+  const accounts = await response.json()
+  return {
+      props: {accounts},
+  }
+}
+
+
 export default Accounts;
 
