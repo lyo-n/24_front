@@ -102,9 +102,11 @@ const Accounts = ({accounts}) =>  {
             </Table>   
             <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', top: '30px'}}>
             <Link href="/accounts" passHref legacyBehavior>
-                <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
+                {/* <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
                   Create account
-                </Button>
+                </Button> */}
+
+                NEXT
             </Link>
                 
             </InputGroup>

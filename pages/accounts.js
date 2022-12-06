@@ -103,7 +103,7 @@ const Accounts = () => {
     </div>
         <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', display: "flex"}}>
             <Link href="/" passHref legacyBehavior>
-                <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
+                {/* <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
                     onClick={handleCreate}
                 >
                     Create account
@@ -111,7 +111,8 @@ const Accounts = () => {
                 <Button variant="outline-dark" id="button-addon1" style={{ width: '150px', top: '20px'}}
                 >
                     Back
-                </Button>
+                </Button> */}
+                BACK
             </Link>
         </InputGroup>
         </Container>   
