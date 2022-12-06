@@ -1,4 +1,4 @@
-import {Link} from "next";
+import Link from 'next/link'
 import axios from "axios";
 import {useState} from 'react';
 import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
