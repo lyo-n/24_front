@@ -102,7 +102,6 @@ const Accounts = () => {
         </InputGroup>
     </div>
         <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', display: "flex"}}>
-            
                 <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
                     onClick={handleCreate}
                 >
