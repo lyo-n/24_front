@@ -19,14 +19,15 @@ const Accounts = ({accounts}) =>  {
     };
     
     const handleDelete = async (_id) => {
+
+      useEffect(() => {
       try {
-        useEffect(() => {
           await axios.delete(`https://two4-server.onrender.com/api/${_id}`);
-        }, [])
           // window.location.reload();
       } catch (err) {
           console.log(err);
       }
+    }, [])
     };
 
     const searchFilter = (array) => {
