@@ -109,20 +109,15 @@ const AccountsCreate = () => {
     </div>
         <InputGroup className="mb-4" style={{ width: '20%', margin: '0 auto'}}>
                 <Link href="/" style={{color: "red", textDecoration: "none", width: "40px"}}>
-                <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
-                    onClick={handleCreate}
-                >
-                    Create account
-                    {/* <Link href="/" style={{color: "red", textDecoration: "none", width: "40px"}}> */}
-                    
-                    {/* </Link> */}
-                </Button>
-                <Button variant="outline-dark" id="button-addon1" style={{ width: '150px', top: '20px'}}
-                >
-                    {/* <Link href="/" style={{ color: "red", textDecoration: "none", width: "40px"}}> */}
+                    <Button variant="outline-success" id="button-addon1" style={{ width: '150px'}} 
+                        onClick={handleCreate}
+                    >
+                        Create account
+                    </Button>
+                    <Button variant="outline-dark" id="button-addon1" style={{ width: '150px', top: '20px'}}
+                    >
                         Back
-                    {/* </Link> */}
-                </Button>
+                    </Button>
                 </Link>
         </InputGroup>
         </Container>   
