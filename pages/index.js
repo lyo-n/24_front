@@ -134,65 +134,48 @@ import {useState, useEffect} from 'react';
 import {Form, Button, InputGroup, Table, Container} from 'react-bootstrap';
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
-import { getFootballersData } from "../state/actions/footballerActions";
+import { getAllAccounts } from "../state/actions/accountsAction";
 
 const Accounts = () =>  {
     const [query, setQuery] = useState('');
-    // const [accounts, setAcc] = useState('');
-    // console.log("🚀 ~ file: index.js:142 ~ Accounts ~ accountss", accounts)
-
     const router = useRouter();
 
-    const footballersData = useSelector((state) => state?.footballers?.footballersData);
+    const accountsData = useSelector((state) => state?.accounts?.accountsData);
+    console.log("🚀 ~ file: index.js:144 ~ Accounts ~ accounts", accountsData)
     const dispatch = useDispatch();
 
     const fetchFootballers = async () => {
         await axios.get("https://two4-server.onrender.com/api/accounts")
         .then((res) => {
-            dispatch(getFootballersData(res.data))
+            dispatch(getAllAccounts(res.data))
             console.log(res.data)
         })
     }
 
     useEffect(() => {
       fetchFootballers()
-      // setAcc(footballersData)
     },[])
 
-    console.log(footballersData);
-
-
-
-
-
-
-
-
-
     const handlePaid = async (_id) => {
-      try {
-          await axios.get(`https://two4-server.onrender.com/api/${_id}`);
-          window.location.reload();
-      } catch (err) {
-          console.log(err);
-      }
-    };
-    
-    const handleDelete = async (_id) => {
-      try {
-          await axios.delete(`https://two4-server.onrender.com/api/${_id}`);
-          window.location.reload();
-      } catch (err) {
-          console.log(err);
-      }
-    };
+      await axios.get(`https://two4-server.onrender.com/api/${_id}`)
+          .then((res) => {
+            router.reload();
+          })
+  }
 
-    const searchFilter = (footballersData) => {
-    return footballersData?.filter(
+  const handleDelete = async (_id) => {
+    await axios.delete(`https://two4-server.onrender.com/api/${_id}`)
+        .then((res) => {
+          router.reload();
+        })
+}
+
+    const searchFilter = (accountsData) => {
+    return accountsData?.filter(
       (el) => el.companyName.includes(query)
     )
     }
-    const filtered = searchFilter(footballersData)
+    const filtered = searchFilter(accountsData)
 
     return (
         <div>

@@ -1,7 +1,5 @@
 import { Provider } from 'react-redux';
 import { store } from "../state/store";
-
-
 import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

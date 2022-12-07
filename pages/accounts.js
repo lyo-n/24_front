@@ -1,15 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 import {Form, Button, InputGroup, Container} from 'react-bootstrap';
 import Link from 'next/link';
 
 
-
-const Accounts = () => {
+const AccountsCreate = () => {
     const [companyName, setCompany] = useState('');
     const [gameName, setGame] = useState('');
     const [paymentAmount, setAmount] = useState('');
     const [currency, setCurrency] = useState('');    
+
+    const router = useRouter();
 
     const changeCompanyName = (e) => {
         const currentCompany = e.target.value;
@@ -48,13 +50,17 @@ const Accounts = () => {
                 payment,
                 paymentData
             };    
-            await axios.post("https://two4-server.onrender.com/api/accountsNew", newProduct);
-            window.location.reload();
+            await axios.post(`https://two4-server.onrender.com/api/accountsNew`, newProduct)
+            .then((res) => {
+                router.reload();
+            })
         } catch (err) {
             console.log(err);
         }
     };
 
+
+    
 
     return (
         <div style={{margin: "0 auto"}}>   
@@ -120,4 +126,4 @@ const Accounts = () => {
     </div>
     )
 }
-export default Accounts;
+export default AccountsCreate;
