@@ -244,7 +244,7 @@ const Accounts = () =>  {
             </Table>   
             <InputGroup className="mb-3" style={{ width: '20%', margin: '0 auto', top: '30px'}}>
                 <Button variant="outline-dark" id="button-addon1" style={{ width: '150px'}}>
-                  <Link href="/accounts">
+                  <Link style={{color: "red", textDecoration: "none", width: "40px"}} href="/accounts">
                     Create account
                   </Link>
                 </Button>
